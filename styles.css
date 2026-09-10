@@ -292,6 +292,15 @@ ul.post-list a:hover .post-title{text-decoration:underline}
   margin-bottom:12px;
 }
 
+.project-note{
+  display:block;
+  font-size:12.5px;
+  color:var(--muted);
+  font-style:italic;
+  line-height:1.5;
+  margin-bottom:12px;
+}
+
 .project-link{
   display:inline-block;
   font-size:12.5px;

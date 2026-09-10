@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Character Select — a game to reprogram your identity</title>
+<meta name="description" content="Play Character Select, a three-day game from Swim and Color. Pick a belief, build a character who wouldn't hold it, and print a pocket card to play from.">
+<link rel="canonical" href="https://swimandcolor.com/character-select/">
+
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Swim and Color">
+<meta property="og:title" content="Character Select">
+<meta property="og:description" content="A three-day game for loosening a belief that's been running you.">
+<meta property="og:url" content="https://swimandcolor.com/character-select/">
+<meta property="og:image" content="https://swimandcolor.com/images/character-select-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Character Select">
+<meta name="twitter:description" content="A three-day game for loosening a belief that's been running you.">
+<meta name="twitter:image" content="https://swimandcolor.com/images/character-select-cover.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="play.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="ph">
+    <a class="back" href="../">&larr; Swim and Color</a>
+    <p class="ph-kicker">Swim &amp; Color <span class="dot">&middot;</span> No. 01</p>
+    <h1 class="ph-title">Character Select</h1>
+    <p class="ph-sub">A game to reprogram your identity</p>
+  </header>
+
+  <section class="intro">
+    <p>A three&#8209;day game for loosening a belief that&rsquo;s been running you. Pick the belief, build a character who wouldn&rsquo;t hold it, then give them three things they <em>can</em> do, three they <em>cannot</em>, and one they <em>must</em>.</p>
+    <p>Fill this in and you&rsquo;ll get a pocket card to print and play from &mdash; or take the blank workbook and write it out by hand.</p>
+    <div class="intro-actions">
+      <a class="pill" href="character-select.pdf" download>Download the blank workbook (PDF)</a>
+      <a class="quiet" href="https://swimandcolor.substack.com" target="_blank" rel="noopener">Read the whole game on Substack &rarr;</a>
+    </div>
+  </section>
+
+  <form id="game" autocomplete="off">
+
+    <section class="step">
+      <p class="step-no">Step 01</p>
+      <h2>The belief</h2>
+      <p class="step-help">Pick a belief you want to shake up, or get rid of. It should be hard to write down, or even look at, at first.</p>
+
+      <label class="fl" for="brainstorm">Get a few out first <span class="opt">optional &middot; stays on this page</span></label>
+      <textarea id="brainstorm" rows="4" placeholder="One per line. Nobody sees this but you."></textarea>
+
+      <label class="fl" for="belief">Now the one you&rsquo;ll play against</label>
+      <input type="text" id="belief" maxlength="120" placeholder="e.g. if I rest, I&rsquo;ll fall behind">
+    </section>
+
+    <section class="step">
+      <p class="step-no">Step 02</p>
+      <h2>The character</h2>
+      <p class="step-help">An identity that wouldn&rsquo;t hold that belief. It should work like a film title &mdash; easy and fun to say.</p>
+
+      <label class="fl" for="drafts">Draft a few <span class="opt">optional</span></label>
+      <textarea id="drafts" rows="3" placeholder="Miss Secure &middot; Off the Clock &middot; The Daredevil"></textarea>
+
+      <label class="fl" for="character">Lock one in</label>
+      <input type="text" id="character" maxlength="40" placeholder="e.g. Off the Clock">
+    </section>
+
+    <section class="step">
+      <p class="step-no">Step 03</p>
+      <h2>Constraints</h2>
+      <p class="step-help">The mechanics of play. Keep them short enough to catch yourself in the moment.</p>
+
+      <div class="con">
+        <p class="con-label can">Can</p>
+        <p class="con-help">Three things your character can do each day. In line with who they are.</p>
+        <input type="text" id="can1" maxlength="70" placeholder="1">
+        <input type="text" id="can2" maxlength="70" placeholder="2">
+        <input type="text" id="can3" maxlength="70" placeholder="3">
+      </div>
+
+      <div class="con">
+        <p class="con-label cannot">Cannot</p>
+        <p class="con-help">Three things they can&rsquo;t. Choose things you do in normal life that are at odds with this character.</p>
+        <input type="text" id="cannot1" maxlength="70" placeholder="1">
+        <input type="text" id="cannot2" maxlength="70" placeholder="2">
+        <input type="text" id="cannot3" maxlength="70" placeholder="3">
+      </div>
+
+      <div class="con">
+        <p class="con-label must">Must</p>
+        <p class="con-help">One thing they must do &mdash; something core to the identity.</p>
+        <input type="text" id="must" maxlength="70" placeholder="The one non-negotiable">
+      </div>
+
+      <p class="fl standalone">How many days?</p>
+      <div class="days">
+        <label><input type="radio" name="days" value="1"><span>1 day</span></label>
+        <label><input type="radio" name="days" value="2"><span>2 days</span></label>
+        <label><input type="radio" name="days" value="3" checked><span>3 days</span></label>
+      </div>
+      <p class="step-help tight">Three is recommended. One is okay too.</p>
+    </section>
+
+  </form>
+
+  <section class="out">
+    <h2 class="out-title">Your card</h2>
+    <p class="out-help">This is what prints. Everything else on the page stays behind.</p>
+
+    <div class="card-stage">
+      <div class="card" id="card">
+        <div class="card-head">
+          <span>Swim &amp; Color</span>
+          <span>No. 01</span>
+        </div>
+
+        <p class="card-game">Character Select</p>
+
+        <p class="card-kicker">Playing as</p>
+        <p class="card-name" id="c-name">Your character</p>
+
+        <div class="card-rule">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 L14.4 9.6 L24 12 L14.4 14.4 L12 24 L9.6 14.4 L0 12 L9.6 9.6 Z"/></svg>
+        </div>
+
+        <div class="card-block">
+          <p class="card-label">Can</p>
+          <ol class="card-list" id="c-can"><li class="ph-li">&mdash;</li></ol>
+        </div>
+
+        <div class="card-block">
+          <p class="card-label cannot">Cannot</p>
+          <ol class="card-list" id="c-cannot"><li class="ph-li">&mdash;</li></ol>
+        </div>
+
+        <div class="card-block">
+          <p class="card-label must">Must</p>
+          <p class="card-must" id="c-must">&mdash;</p>
+        </div>
+
+        <div class="card-foot">
+          <div class="card-belief" id="c-belief-wrap">
+            <p class="card-label sm">Playing against</p>
+            <p class="card-belief-text" id="c-belief">&mdash;</p>
+          </div>
+          <div class="card-days">
+            <span class="card-label sm">Days</span>
+            <span class="boxes" id="c-days"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="out-actions">
+      <button type="button" class="btn" id="print">Print / Save as PDF</button>
+      <button type="button" class="quiet-btn" id="reset">Start over</button>
+    </div>
+    <p class="saved" id="saved">Saved on this device as you type.</p>
+  </section>
+
+  <footer class="pf">
+    <a href="../">Swim and Color</a>
+    <span>&copy; 2026</span>
+  </footer>
+
+</div>
+
+<script src="play.js"></script>
+</body>
+</html>
