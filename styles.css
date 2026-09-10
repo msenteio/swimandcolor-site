@@ -231,6 +231,97 @@ ul.post-list a:hover .post-title{text-decoration:underline}
 
 .link-quiet:hover{border-bottom-color:var(--ink)}
 
+/* ---------- PROJECT CARD ---------- */
+.project{
+  display:flex;
+  gap:22px;
+  align-items:flex-start;
+  text-decoration:none;
+  color:inherit;
+}
+
+.project-cover{
+  flex-shrink:0;
+  width:190px;
+  display:block;
+  border:1px solid var(--line);
+  overflow:hidden;
+  line-height:0;
+}
+
+.project-cover img{
+  width:100%;
+  height:auto;
+  display:block;
+  transition:transform .3s ease;
+}
+
+.project:hover .project-cover img{transform:scale(1.03)}
+
+.project-body{
+  flex:1;
+  min-width:0;
+  display:block;
+}
+
+.project-kicker{
+  display:block;
+  font-size:10.5px;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:7px;
+}
+
+.project-title{
+  display:block;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:19px;
+  line-height:1.2;
+  margin-bottom:9px;
+}
+
+.project:hover .project-title{text-decoration:underline}
+
+.project-desc{
+  display:block;
+  font-size:13.5px;
+  color:var(--body);
+  line-height:1.6;
+  margin-bottom:12px;
+}
+
+.project-link{
+  display:inline-block;
+  font-size:12.5px;
+  color:var(--ink);
+  border-bottom:1px solid var(--line);
+}
+
+.project:hover .project-link{border-bottom-color:var(--ink)}
+
+.project-link .arrow{
+  display:inline-block;
+  transition:margin-left .2s ease;
+}
+
+.project:hover .project-link .arrow{margin-left:5px}
+
+.project-aside{
+  font-size:12.5px;
+  color:var(--muted);
+  margin:26px 0 0;
+}
+
+.project-aside a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.project-aside a:hover{border-bottom-color:var(--ink)}
+
+@media (max-width:560px){
+  .project{flex-direction:column;gap:18px}
+  .project-cover{width:100%;max-width:280px}
+}
+
 /* ---------- PLACEHOLDER SECTIONS ---------- */
 .placeholder{
   border:1px dashed var(--line);
