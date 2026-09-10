@@ -13,7 +13,6 @@
     can:        document.getElementById('c-can'),
     cannot:     document.getElementById('c-cannot'),
     must:       document.getElementById('c-must'),
-    belief:     document.getElementById('c-belief'),
     days:       document.getElementById('c-days')
   };
 
@@ -97,8 +96,7 @@
     setText(card.name, val('character').toUpperCase(), 'Your character');
     fillList(card.can,    [val('can1'), val('can2'), val('can3')]);
     fillList(card.cannot, [val('cannot1'), val('cannot2'), val('cannot3')]);
-    setText(card.must,   val('must'),   '—');
-    setText(card.belief, val('belief'), '—');
+    setText(card.must, val('must'), '—');
 
     card.days.innerHTML = '';
     for (var i = 0; i < chosenDays(); i++) {
