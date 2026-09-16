@@ -9,7 +9,6 @@
   --coral:#DC6149;
   --moss:#6F9E6A;
   --sun:#E0A33E;
-  --violet:#8A6FAE;
 
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
@@ -75,30 +74,19 @@ header.hero{
   margin:26px 0 0;
 }
 
-.hero-dots{
-  display:flex;
-  justify-content:center;
-  gap:7px;
-  margin-top:26px;
-}
-
-.hero-dots span{
-  width:7px;
-  height:7px;
-  border-radius:50%;
+.hero-wave{
   display:block;
+  width:100%;
+  max-width:340px;
+  height:auto;
+  margin:24px auto 0;
 }
-
-.hero-dots span:nth-child(1){background:var(--pool)}
-.hero-dots span:nth-child(2){background:var(--coral)}
-.hero-dots span:nth-child(3){background:var(--sun)}
-.hero-dots span:nth-child(4){background:var(--moss)}
-.hero-dots span:nth-child(5){background:var(--violet)}
 
 @media (max-width:560px){
   header.hero{padding-top:44px}
   .hero-mark img{max-width:300px}
   .hero-tag{letter-spacing:1.6px;margin-top:22px}
+  .hero-wave{max-width:260px;margin-top:20px}
 }
 
 /* ---------- SECTIONS ---------- */
