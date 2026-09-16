@@ -36,14 +36,28 @@ footer.site-footer{
 a{color:inherit}
 
 /* ---------- HERO ---------- */
+/* fills the first screen; script.js carries a downward scroll from here straight to <main> */
 header.hero{
-  padding:64px 0 8px;
+  --hero-w:min(640px, 100%, max(180px, calc((100vh - 190px) * 1.47)));
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:48px 0;
   text-align:center;
+}
+
+/* svh ignores the mobile address bar, so the hero keeps one height as the bar hides */
+@supports (height:100svh){
+  header.hero{
+    --hero-w:min(640px, 100%, max(180px, calc((100svh - 190px) * 1.47)));
+    min-height:100svh;
+  }
 }
 
 .hero-mark{
   position:relative;
-  max-width:400px;
+  width:var(--hero-w);
   margin:0 auto;
   line-height:0;
 }
@@ -56,17 +70,17 @@ header.hero{
 
 .hero-tag{
   width:fit-content;
-  font-size:11px;
-  letter-spacing:2.2px;
+  font-size:16px;
+  letter-spacing:4px;
   text-transform:uppercase;
   color:var(--muted);
-  margin:26px auto 0;
+  margin:34px auto 0;
 }
 
 .hero-wave{
   position:relative;
-  max-width:340px;
-  margin:24px auto 0;
+  width:calc(var(--hero-w) * .82);
+  margin:30px auto 0;
   line-height:0;
 }
 
@@ -76,11 +90,11 @@ header.hero{
   display:block;
 }
 
+/* phones run out of width before height, so the wave matches the wordmark instead of trailing it */
 @media (max-width:560px){
-  header.hero{padding-top:44px}
-  .hero-mark{max-width:300px}
-  .hero-tag{letter-spacing:1.6px;margin-top:22px}
-  .hero-wave{max-width:260px;margin-top:20px}
+  header.hero{padding:40px 0}
+  .hero-tag{font-size:14px;letter-spacing:3px;margin-top:26px}
+  .hero-wave{width:var(--hero-w);margin-top:24px}
 }
 
 /* ---------- GLINT ---------- */
