@@ -99,6 +99,14 @@
     return true;
   }
 
+  var arrow = document.querySelector('.hero-arrow');
+  if (arrow) {
+    arrow.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (!holding) glide();
+    });
+  }
+
   window.addEventListener('wheel', function (e) {
     lastInput = performance.now();
     if (swallow(e) || e.ctrlKey) return; // ctrl + wheel is pinch-zoom

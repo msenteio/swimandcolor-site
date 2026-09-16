@@ -38,19 +38,20 @@ a{color:inherit}
 /* ---------- HERO ---------- */
 /* fills the first screen; script.js carries a downward scroll from here straight to <main> */
 header.hero{
-  --hero-w:min(640px, 100%, max(180px, calc((100vh - 190px) * 1.47)));
+  --hero-w:min(640px, 100%, max(180px, calc((100vh - 230px) * 1.47)));
+  position:relative;
   min-height:100vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:48px 0;
+  padding:48px 0 90px;
   text-align:center;
 }
 
 /* svh ignores the mobile address bar, so the hero keeps one height as the bar hides */
 @supports (height:100svh){
   header.hero{
-    --hero-w:min(640px, 100%, max(180px, calc((100svh - 190px) * 1.47)));
+    --hero-w:min(640px, 100%, max(180px, calc((100svh - 230px) * 1.47)));
     min-height:100svh;
   }
 }
@@ -90,9 +91,50 @@ header.hero{
   display:block;
 }
 
+/* hand-drawn arrow at the foot of the opening screen; the extra bottom padding keeps it clear of the wave */
+.hero-arrow{
+  position:absolute;
+  left:50%;
+  bottom:12px;
+  width:48px;
+  height:56px;
+  margin-left:-24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--ink);
+  opacity:.85;
+  transition:opacity .2s ease;
+}
+
+.hero-arrow:hover{opacity:1}
+
+.hero-arrow:focus-visible{
+  opacity:1;
+  outline:2px solid var(--ink);
+  outline-offset:2px;
+  border-radius:24px;
+}
+
+.hero-arrow svg{
+  width:24px;
+  height:38px;
+  display:block;
+  animation:hero-arrow 2.4s ease-in-out infinite;
+}
+
+@keyframes hero-arrow{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(6px)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-arrow svg{animation:none}
+}
+
 /* phones run out of width before height, so the wave matches the wordmark instead of trailing it */
 @media (max-width:560px){
-  header.hero{padding:40px 0}
+  header.hero{padding:40px 0 64px}
   .hero-tag{font-size:14px;letter-spacing:3px;margin-top:26px}
   .hero-wave{width:var(--hero-w);margin-top:24px}
 }
