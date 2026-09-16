@@ -6,9 +6,6 @@
   --body:#3C3830;
 
   --pool:#3B8EA5;
-  --coral:#DC6149;
-  --moss:#6F9E6A;
-  --sun:#E0A33E;
 
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
@@ -107,17 +104,12 @@ main{padding:40px 0 8px}
   margin:0 0 12px;
 }
 
-.chip{
-  width:9px;
-  height:9px;
+.section-icon{
+  width:16px;
+  height:auto;
   flex-shrink:0;
   display:block;
 }
-
-.chip-pool{background:var(--pool)}
-.chip-coral{background:var(--coral)}
-.chip-moss{background:var(--moss)}
-.chip-sun{background:var(--sun)}
 
 .section-intro{
   font-size:13px;
