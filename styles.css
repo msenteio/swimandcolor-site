@@ -41,21 +41,6 @@ header.hero{
   text-align:center;
 }
 
-.hero-badge{
-  position:relative;
-  width:64px;
-  height:64px;
-  margin:0 auto 22px;
-}
-
-.hero-badge img{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  object-fit:cover;
-  display:block;
-}
-
 .hero-mark{
   position:relative;
   max-width:400px;
@@ -111,8 +96,6 @@ header.hero{
 }
 
 .glint-on .glint{display:block}
-
-.glint-badge{border-radius:50%}
 
 .glint-mark{
   -webkit-mask:url(images/swim-color-wordmark.png) 0 0/100% 100% no-repeat;
