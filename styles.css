@@ -365,6 +365,38 @@ ul.post-list li:last-child{margin-bottom:0}
 
 .project:hover .project-cover img{transform:scale(1.03)}
 
+.project + .project{margin-top:30px}
+
+/* a set-in-type tarot card for pages without a cover photo */
+.project-cover-type{
+  aspect-ratio:3/2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  line-height:1;
+  background:#FBFAF6;
+  box-shadow:inset 0 0 0 6px var(--paper), inset 0 0 0 7px var(--line);
+  transition:box-shadow .3s ease;
+}
+
+.project:hover .project-cover-type{box-shadow:inset 0 0 0 6px var(--paper), inset 0 0 0 7px var(--ink)}
+
+.tc-num{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:40px;
+  letter-spacing:1px;
+}
+
+.tc-name{
+  font-size:10px;
+  letter-spacing:2.4px;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
 .project-body{
   flex:1;
   min-width:0;
